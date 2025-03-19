@@ -1,8 +1,8 @@
 package U9T1_Lab2;
 
 public class Dog extends Animal {
-    boolean hasBeenWalked;
-    String favoritePark;
+    private boolean hasBeenWalked;
+    private String favoritePark;
 
     public Dog(String name, int age) {
         super(name, age);
@@ -13,15 +13,15 @@ public class Dog extends Animal {
     public void walk() {
         if (!hasBeenWalked) {
             hasBeenWalked = true;
-            System.out.println(name + " has now been walked!");
+            System.out.println(getName() + " has now been walked!");
         } else {
-            System.out.println(name + " was already walked today.");
+            System.out.println(getName() + " was already walked today.");
         }
     }
 
     public void goToPark(String park) {
-        System.out.println(name + " is going to ");
-        System.out.println("This is " + name + "'s new favorite park!");
+        System.out.println(getName() + " is going to ");
+        System.out.println("This is " + getName() + "'s new favorite park!");
         favoritePark = park;
     }
 

@@ -1,8 +1,8 @@
 package U9T1_Lab2;
 
 public class Cat extends Animal {
-    boolean hasPlayedWith;
-    boolean hidden;
+    private boolean hasPlayedWith;
+    private boolean hidden;
 
     public Cat(String name, int age) {
         super(name, age);
@@ -13,14 +13,14 @@ public class Cat extends Animal {
     public void play() {
         if (!hasPlayedWith) {
             hasPlayedWith = true;
-            System.out.println(name + " has now been played with!");
+            System.out.println(getName() + " has now been played with!");
         } else {
-            System.out.println(name + " was already played with today.");
+            System.out.println(getName() + " was already played with today.");
         }
     }
 
     public void hide() {
-        System.out.println(name + " went to go hide!");
+        System.out.println(getName() + " went to go hide!");
         hidden = true;
     }
 

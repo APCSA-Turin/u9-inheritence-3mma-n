@@ -1,10 +1,10 @@
 package U9T1_Lab2;
 
 public class Animal {
-    String name;
-    int age;
-    boolean vaccinated;
-    Animal friend;
+    private String name;
+    private int age;
+    private boolean vaccinated;
+    private Animal friend;
 
     public Animal(String n, int a) {
         name = n;
@@ -14,7 +14,7 @@ public class Animal {
     }
 
     public void adopt() {
-        System.out.println("My name is " + name + " and I am " + age + " years old.")
+        System.out.println("My name is " + name + " and I am " + age + " years old.");
         System.out.println("Thank you for adopting me!");
     }
 
@@ -33,5 +33,9 @@ public class Animal {
 
     public Animal getFriend() {
         return friend;
+    }
+
+    public String getName() {
+        return name;
     }
 }
