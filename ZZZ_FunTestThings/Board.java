@@ -3,12 +3,18 @@ package ZZZ_FunTestThings;
 public class Board {
     Entity[][] board;
 
-    public Board() {
-        board = new Entity[10][10];
+    public Board(int size) {
+        board = new Entity[size][size];
     }
 
     public void placeEntity(Entity e, int r, int c) {
         board[r][c] = e;
+    }
+
+    public void swap(int r1, int c1, int r2, int c2) {
+        Entity temp = board[r1][c1];
+        board[r1][c1] = board[r2][c2];
+        board[r2][c2] = temp;
     }
 
     public String toString() {
